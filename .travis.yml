@@ -1,7 +1,7 @@
 sudo: required
 language: generic 
 services:
-  - docker
+  - docker-react
 
 before_install:
   - docker build -t sebastianulbrich/docker-react -f Dockerfile.dev .
@@ -15,7 +15,7 @@ deploy:
   app: "docker-react"
   env: "Docker-env"
   bucket_name: "elasticbeanstalk-eu-central-1-712768071943"
-  bucket_path: "docker-ract"
+  bucket_path: "docker-react"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
